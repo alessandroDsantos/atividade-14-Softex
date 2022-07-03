@@ -1,0 +1,16 @@
+q_rodas = int(input("Digite a quantidade de rodas do veículo: "))
+peso = float(input("Digite o peso bruto em quilogramas do veículo: "))
+q_pessoa = int(input("Digite quantidade de pessoas no veículo: "))
+
+if (q_rodas <= 1):
+  print("\nNão há categoria de habilitação, para veículos com menos de duas rodas.")
+elif (q_rodas >= 2) and (q_rodas <= 3):
+  print("\nCNH->A")
+elif (q_rodas > 3) and (peso <= 3500.0) and (q_pessoa <= 8):
+  print("\nCNH->B")
+elif (q_rodas > 3) and (peso > 3500.0) and (peso <= 6000.0) and (q_pessoa <= 8):
+  print("\nCNH->C")
+elif (q_rodas > 3) and (peso <= 6000.0) and (q_pessoa > 8):
+  print("\nCNH->D")
+else:
+  print("\nCNH->E")
